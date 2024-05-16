@@ -9,7 +9,6 @@ from flask_migrate import Migrate
 from flask_restful import Api
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import MetaData
-from dotenv import load_dotenv
 from flask_marshmallow import Marshmallow
 
 import os
@@ -24,7 +23,6 @@ app.json.compact = False
 
 
 #session key configuration
-load_dotenv()
 app.secret_key= os.getenv('SECRET_KEY')
 
 
